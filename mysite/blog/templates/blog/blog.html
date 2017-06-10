@@ -1,0 +1,10 @@
+{% extends "webapp/header.html"%}
+{% block content %}
+	{% for post in object_list %}
+	<div class='well'>
+	<h4> <b>{{post.game}} </b> : {{ post.title }} </h4>
+		<h5>{{ post.date|date:"Y-m-d" }}</h5>
+		<p> {{post.body}} </p>
+	</div>
+	{% endfor %}
+{% endblock %}
